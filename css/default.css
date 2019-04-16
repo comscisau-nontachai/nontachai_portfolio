@@ -52,7 +52,9 @@ e. Others
 /*  2. Typography
        Vertical rhythm with leading derived from 6
 --------------------------------------------------------------------- */
-
+html {
+  scroll-behavior: smooth;
+}
 
 /*	Blockquotes */
 blockquote {
