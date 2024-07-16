@@ -398,6 +398,10 @@ h6,
   font-size: 1.7rem;
 }
 
+.custom-navbar .navbar-brand p {
+  font-size: 14px;
+}
+
 /* Burger */
 .burger {
   width: 28px;
