@@ -89,30 +89,7 @@
             <div class="col-md-7" data-aos="fade-up">
 
               <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint1.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint3.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint4.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint5.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint6.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/foodpoint/foodpoint7.jpg" alt="Image" class="img-fluid">
-                  </div>
-
+                <div class="swiper-wrapper" id="loadImageHolder">
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
@@ -182,6 +159,22 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script>
+    window.onload = (event) => {
+      loadImage();
+    };
+    function loadImage() {
+      var holder = document.getElementById('loadImageHolder');
+      var text = ""
+      for (let i = 1; i <= 9; i++) {
+        text += '<div class="swiper-slide">' +
+          '<img src="../assets/img/foodpoint/foodpoint' + i + '.jpg" alt="Image" class="img-fluid">' +
+          '</div>';
+      }
+      holder.innerHTML = text
+    }
+  </script>
 
 </body>
 
