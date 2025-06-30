@@ -49,7 +49,7 @@
             <li><a href="../skills.html">Skills</a></li>
           </ul>
         </div>
-        
+
       </div>
 
     </div>
@@ -77,8 +77,8 @@
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-6" data-aos="fade-up">
-            <h2>SLASH QR Partner</h2>
-            <p>App for Receive Order and Manage Menu order for Merchant.</p>
+            <h2>Eminent Air</h2>
+            <p>help calculate BTU to use in your room and collect reward , control your air conditioner from mobile</p>
           </div>
         </div>
       </div>
@@ -91,8 +91,6 @@
               <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper" id="loadImageHolder">
 
-                
-
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
@@ -101,30 +99,33 @@
               <div class="sticky-content">
                 <h4 class="h4 mb-3">Description</h4>
                 <ul class="list-unstyled list-line mb-5">
-                  <li>Order management</li>
-                  <li>Menu management</li>
-                  <li>Printer management</li>
-                  <li>Notification setting</li>
-                  <li>Redeem History</li>
-                  <li>Dashboard and report</li>
-                  
+                  <li>calculate Btu for your room</li>
+                  <li>control air conditioner from mobile</li>
+                  <li>view catalog</li>
+                  <li>redeem privilege</li>
+                
+
                 </ul>
 
                 <h4 class="h4 mb-3">Tech Stack Used</h4>
                 <ul class="list-unstyled list-line mb-5">
-                  <li>Mvvm</li>
+                  <li>Kotlin</li>
+                  <li>Java</li>
+                  <li>MVP</li>
+                  <li>Qr Code Scanner (base on Zxing)</li>
                   <li>Retrofit</li>
-                  <li>Firebase Cloud Messaging</li>
-                  <li>Graph Libs</li>
-                  <li>Printer SDK</li>
+                  <li>Glide</li>
+                  <li>Room</li>
+                  <li>Firebase</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Watch On Google Play  <i class="bi bi-google-play"></i></a></p>
+                <p><a href="https://play.google.com/store/apps/details?id=com.feyverly.eaandroid&hl=th"
+                    class="readmore">Watch On Google Play <i class="bi bi-google-play"></i></a></p>
               </div>
             </div>
           </div>
         </div>
-    </section> 
+    </section>
 
   </main><!-- End #main -->
 
@@ -141,7 +142,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
           -->
-          
+
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
@@ -174,14 +175,15 @@
     function loadImage() {
       var holder = document.getElementById('loadImageHolder');
       var text = ""
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 6; i++) {
         text += '<div class="swiper-slide">' +
-          '<img src="../assets/img/slash/slash' + i + '.jpg" alt="Image" class="img-fluid">' +
+          '<img src="../assets/img/eminent-air/ea' + i + '.png" alt="Image" class="img-fluid">' +
           '</div>';
       }
       holder.innerHTML = text
     }
   </script>
+
 </body>
 
 </html>

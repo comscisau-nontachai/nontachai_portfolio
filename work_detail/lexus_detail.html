@@ -89,28 +89,7 @@
             <div class="col-md-7" data-aos="fade-up">
 
               <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus1.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus2.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus3.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus4.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus5.jpg" alt="Image" class="img-fluid">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../assets/img/lexus/lexus6.jpg" alt="Image" class="img-fluid">
-                  </div>
-
-
+                <div class="swiper-wrapper" id="loadImageHolder">
                   
 
                 </div>
@@ -132,8 +111,11 @@
                 <h4 class="h4 mb-3">Tech Stack Used</h4>
                 <ul class="list-unstyled list-line mb-5">
                   <li>Kotlin</li>
+                  <li>Java</li>
                   <li>Google Map Api</li>
                   <li>Fcm</li>
+                  <li>Retrofit</li>
+                  <li>Glide</li>
                   
                 </ul>
 
@@ -184,6 +166,21 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+  <script>
+    window.onload = (event) => {
+      loadImage();
+    };
+    function loadImage() {
+      var holder = document.getElementById('loadImageHolder');
+      var text = ""
+      for (let i = 1; i <= 8; i++) {
+        text += '<div class="swiper-slide">' +
+          '<img src="../assets/img/lexus/lexus' + i + '.jpg" alt="Image" class="img-fluid">' +
+          '</div>';
+      }
+      holder.innerHTML = text
+    }
+  </script>
 
 </body>
 
