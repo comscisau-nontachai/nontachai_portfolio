@@ -49,7 +49,7 @@
             <li><a href="../skills.html">Skills</a></li>
           </ul>
         </div>
-        
+
       </div>
 
     </div>
@@ -90,9 +90,9 @@
             <div class="col-md-7" data-aos="fade-up">
 
               <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" id="img_detail">
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <img src="../assets/img/pos/pos_detail1.png" alt="Image" class="img-fluid">
                   </div>
                   <div class="swiper-slide">
@@ -124,7 +124,7 @@
                   </div>
                   <div class="swiper-slide">
                     <img src="../assets/img/pos/pos_detail11.png" alt="Image" class="img-fluid">
-                  </div>
+                  </div> -->
 
                 </div>
                 <div class="swiper-pagination"></div>
@@ -142,7 +142,7 @@
                   <li>Table management</li>
                   <li>Merchant use more 100+</li>
                   <li>Mobile Supported</li>
-                
+
                 </ul>
 
                 <h4 class="h4 mb-3">Tech Stack Used</h4>
@@ -154,12 +154,13 @@
                   <li>Printer SDK</li>
                 </ul>
 
-                <p><a href="https://play.google.com/store/apps/details?id=com.feyverly.pos" target="_blank" class="readmore">Watch On Google Play  <i class="bi bi-google-play"></i></a></p>
+                <p><a href="https://play.google.com/store/apps/details?id=com.feyverly.pos" target="_blank"
+                    class="readmore">Watch On Google Play <i class="bi bi-google-play"></i></a></p>
               </div>
             </div>
           </div>
         </div>
-    </section> 
+    </section>
 
   </main><!-- End #main -->
 
@@ -176,7 +177,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
           -->
-          
+
           </div>
         </div>
         <div class="col-sm-6 social text-md-end">
@@ -201,6 +202,22 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+  <script>
+    function createDivs(count) {
+      let html = '';
+      for (let i = 0; i < count; i++) {
+        html += `<div class="swiper-slide">
+                    <img src="../assets/img/pos/pos_detail${i+1}.png" alt="Image" class="img-fluid">
+                  </div>`;
+      }
+      return html;
+    }
+
+    // สร้าง div 5 อันและแทรกเข้าไปใน id="img_detail"
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('img_detail').innerHTML += createDivs(15);
+    });
+  </script>
 
 </body>
 
